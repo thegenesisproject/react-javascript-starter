@@ -3,6 +3,8 @@
 Start a new project in React/JavaScript using this baseline. This repo is built from scratch... no `create-react-app`.
 
 [![Build Status](https://travis-ci.com/thegenesisproject/react-javascript-starter.svg?branch=develop)](https://travis-ci.com/thegenesisproject/react-javascript-starter)
+[![Maintainability](https://api.codeclimate.com/v1/badges/2d8fca8c664a030602c5/maintainability)](https://codeclimate.com/github/thegenesisproject/react-javascript-starter/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/2d8fca8c664a030602c5/test_coverage)](https://codeclimate.com/github/thegenesisproject/react-javascript-starter/test_coverage)
 
 ### Technologies (Stack)
 

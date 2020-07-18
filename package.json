@@ -4,7 +4,7 @@
   "description": "A starting point for a web app built with React/JavaScript.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --runInBand",
+    "test": "jest --runInBand --coverage",
     "lint": "eslint . --ext .ts"
   },
   "repository": {
