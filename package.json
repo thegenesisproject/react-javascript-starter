@@ -4,7 +4,7 @@
   "description": "A starting point for a web app built with React/JavaScript.",
   "main": "index.js",
   "scripts": {
-    "test": "exit 0",
+    "test": "jest --runInBand",
     "lint": "eslint . --ext .ts"
   },
   "repository": {
@@ -33,6 +33,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.3",
-    "eslint-plugin-react-hooks": "^4.0.8"
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "jest": "^26.1.0"
   }
 }
