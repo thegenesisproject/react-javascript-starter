@@ -1,0 +1,6 @@
+# Ignore npm packages
+node_modules
+
+# Ignore compiled files
+dist
+public
