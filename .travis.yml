@@ -10,5 +10,6 @@ before_script:
   - ./cc-test-reporter before-build
 script:
   - npm test
+  - cat ./coverage/lcov.info
 after_success:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - ./cc-test-reporter after-build --debug -t lcov --exit-code $TRAVIS_TEST_RESULT
