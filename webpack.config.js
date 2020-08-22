@@ -1,11 +1,11 @@
 const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, './src/welcome.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.bundle.js',
-    publicPath: '/assets/', // the url to the output directory resolved relative to the HTML page
   },
   module: {
     rules: [
@@ -17,8 +17,24 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+          },
+        ],
+      },
     ],
   },
+  plugins: [
+    new HtmlWebPackPlugin({
+      title: 'React JavaScript QuickStart',
+      template: './public/index.html',
+      filename: 'index.html',
+      favicon: './public/favicon.png',
+    }),
+  ],
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'), // location of index.html final build
     port: 3030,
