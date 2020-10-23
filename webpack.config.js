@@ -2,12 +2,16 @@
 
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, './src/welcome.js'),
+  entry: path.resolve(__dirname, './src/index.jsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.bundle.js',
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
@@ -27,6 +31,23 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(s[ac]ss|css)$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          // Compiles Sass to CSS
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
@@ -36,6 +57,7 @@ module.exports = {
       filename: 'index.html',
       favicon: './public/favicon.png',
     }),
+    new MiniCssExtractPlugin(),
   ],
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'), // location of index.html final build

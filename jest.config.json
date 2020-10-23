@@ -1,7 +1,8 @@
 {
-  "testRegex": "((\\.|/*.)(spec|test))\\.js?$",
+  "testRegex": "((\\.|/*.)(spec|test))\\.jsx?$",
   "setupFilesAfterEnv": ["<rootDir>/src/tests/enzyme.setup.js"],
   "collectCoverage": true,
   "collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}"],
-  "coverageReporters": ["text", "lcov", "json", "html"]
+  "coverageReporters": ["text", "lcov", "json", "html"],
+  "moduleFileExtensions": ["js", "jsx"]
 }

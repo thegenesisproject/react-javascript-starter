@@ -36,3 +36,7 @@ Start a new project in React/JavaScript using this baseline. This repo is built 
 -   [Travis CI](https://travis-ci.com)
 -   [Code Climate](https://codeclimate.com)
 -   [CircleCI](https://circleci.com) ~ optional
+
+### Principles
+
+-   [Atomic Design](https://dev.to/sanfra1407/how-to-organize-your-components-using-the-atomic-design-dj3)
