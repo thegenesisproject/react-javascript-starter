@@ -2,25 +2,36 @@
   "root": true,
   "env": {
     "browser": true,
+    "es6": true,
     "es2020": true
   },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
   "extends": [
+    "eslint:recommended",
     "plugin:react/recommended",
     "airbnb",
     "prettier",
     "prettier/react"
   ],
   "parserOptions": {
+    "parser": "@babel/eslint-parser",
+    "ecmaVersion": 11,
+    "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
-    },
-    "ecmaVersion": 11,
-    "sourceType": "module"
+    }
+    // "babelOptions": {
+    //   "presets": ["@babel/preset-env", "@babel/preset-react"]
+    // }
   },
-  "plugins": ["react"],
+  "plugins": ["react", "@babel"],
   "rules": {
     "no-console": "warn",
     "no-unused-vars": "warn",
+    "no-undef": "off",
     "react/prefer-stateless-function": "off"
   }
 }

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --runInBand --coverage",
-    "lint": "eslint . --ext .ts",
+    "lint": "eslint . --ext .jsx",
     "start:dev": "npm run build:dev && webpack-dev-server --open --mode development --inline --hot",
     "build:dev": "webpack -d",
     "build": "webpack -p && npm run build:css",
@@ -31,11 +31,13 @@
   },
   "homepage": "https://github.com/thegenesisproject/react-javascript-starter#readme",
   "devDependencies": {
+    "@babel/eslint-parser": "^7.12.1",
+    "@babel/eslint-plugin": "^7.12.1",
     "autoprefixer": "^9.8.6",
     "css-loader": "^4.3.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
-    "eslint": "^7.4.0",
+    "eslint": "^7.11.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",

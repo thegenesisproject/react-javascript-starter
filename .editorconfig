@@ -35,11 +35,11 @@ indent_size = 4
 tab_width = 4
 
 # 2 space indentation
-[*.{js,jsx,ts,py,json}]
+[*.{js,jsx,ts,py,json,scss}]
 indent_style = space
 indent_size = 2
 
-[{*.rb, *.yml, *.js.map, *.jsx}]
+[{*.rb, *.yml, *.js.map, *.jsx, *.scss}]
 indent_style = space
 indent_size = 2
 

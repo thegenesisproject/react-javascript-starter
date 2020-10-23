@@ -4,3 +4,12 @@ node_modules
 # Ignore compiled files
 dist
 public
+
+# Test files
+src/**/*.test.*
+
+# Other ignored files
+webpack.config.js
+tailwind.config.js
+postcss.config.js
+
